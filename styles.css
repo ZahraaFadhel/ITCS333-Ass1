@@ -1,179 +1,262 @@
-body {
-    font-family: Montserrat, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-image: linear-gradient(rgba(243, 129, 129, .9), rgba(252, 227, 138, .9));
-    color: #fff;
+:root {
+  --ourPink: rgba(243, 129, 129, .9);
+  --ourYellow: rgba(252, 227, 138, .9);
+  --ourWhite: #fff;
+}
+
+body, html {
+  font-family: Montserrat, sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-image: linear-gradient(var(--ourPink), var(--ourYellow));
+  color: #fff;
+}
+
+pre {
+  font-family: Montserrat, sans-serif;
+}
+
+nav {
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  top: 0;
+  width: 100%;
+  min-height: 100px;
+}
+
+nav a {
+  padding: 15px;
+  color: var(--ourWhite);
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--ourYellow);
+  font-size: 1.25rem;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+}
+
+.welcome-msg {
+  color: var(--ourWhite);
+  text-align: center;
+  padding: 50px;
+  padding-bottom: 0px;
+}
+
+.welcome-msg h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.explore-button {
+  background-color: transparent;
+  cursor: pointer;
+  padding: 10px 40px;
+  margin: 30px 0;
+  text-align: center;
+  font-size: 0.875em;
+  color: #fff;
+  text-transform: uppercase;
+  border: 2px solid var(--ourWhite);
+  transition: all 0.5s ease;
+}
+
+.explore-button a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.explore-button:hover {
+  border-color: var(--ourYellow);
+}
+
+.explore-button:hover a {
+  color: var(--ourYellow);
+}
+
+.line {
+  display: block;
+  width: 5em;
+  height: 3px;
+  margin: 30px auto 0;
+  background: var(--ourWhite);
+}
+
+.section {
+  padding: 50px 100px;
+  text-align: center;
+}
+
+.teacher-section {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0px;
+  border-radius: 10px;
+}
+
+.teacher-section .teacher-img-container {
+  padding-right: 30px;
+  border-right: 1px solid var(--ourYellow);
+}
+
+.teacher-section .teacher-img-container img {
+  width: 220px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.teacher-section div p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 600px;
+  text-align: left;
+}
+
+/* Weekly Schedule Section */
+.schedule table {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.schedule th, .schedule td {
+  padding: 15px;
+  border: 1px solid var(--ourWhite);
+}
+
+/* Announcements Section */
+.announcements ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.announcements ul li {
+  background-color: var(--ourYellow);
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 10px;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+/* .schedule th {
+  color: #333;
+}
+
+.schedule td {
+  background-color: #FFF5CC;
+} */
+
+
+footer {
+  background-color: black;
+  opacity: 0.85;
+  padding: 30px;
+  text-align: center;
+  color: var(--ourWhite);
+}
+
+footer p {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+footer ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+footer ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+footer ul li a, footer a {
+  color: #fce38a;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: var(--ourYellow);
+}
+
+.contact-us-div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-us-div i {
+  padding: 5px;
+}
+
+.contact-us-div p {
+  padding: 10px;
+}
+
+.fa {
+  color: var(--ourWhite);
+}
+
+/* For Schedule and Announcements sections */
+.schedule, .announcements {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  text-align: left;
+}
+
+.schedule-text, .announcements-text {
+  max-width: 300px;
+}
+
+.schedule table, .announcements ul {
+  flex-grow: 1;
+}
+
+@media (max-width: 768px) {
+
+  /*make it vertical in smaller screens */
+  .section {
+    padding: 30px;
+    gap: 0px;
+    flex-direction: column;
+    text-align: center;
   }
 
-  html, body {
-    width: 100%;
-    margin: 0;
-    padding: 0;
+  .schedule, .announcements {
+    flex-direction: column;
+    text-align: center;
   }
 
-  pre {
-    font-family: Montserrat, sans-serif;
-  }
-  
-  nav {
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    /* position: fixed; */
-    top: 0;
-    width: 100%;
-    /* background-color: rgba(243, 129, 129, .9); */
-    /* opacity: 0.75; */
-    /* background-image: linear-gradient(rgba(243, 129, 129, .9), rgba(252, 227, 138, .9)); */
-    min-height: 85px;
-    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
-  }
-  
-  nav a {
-    padding: 15px;
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2rem;
-  }
-  
-  nav a:hover {
-    color: #fce38a;
-    text-decoration: underline;
-  }
-  
-  .banner {
-    /* opacity: 0.7; */
-    color: white;
+  .schedule-text, .announcements-text {
     text-align: center;
-    padding: 0 50px;
-    /* margin-top: 85px; */
-  }
-  
-  .banner {
-    color: white;
-  }
-  
-  .banner h1 {
-    font-size: 3rem;
-    margin: 0;
-    color: #fff;
-  }
-  
-  .learn-more-button {
-    background-color: transparent;
-    cursor: pointer;
-    padding: 10px 40px;
-    margin: 30px 0;
-    text-align: center;
-    font-family: Montserrat, sans-serif;
-    font-size: 0.875em;
-    color: #fff;
-    text-transform: uppercase;
-    border: 2px solid #fff;
-  }
-  
-  .learn-more-button a {
-      color: #fff;
-      text-decoration: none;
-  }
-  
-  .line {
-    display: block;
-      width: 5em;
-      height: 0.1875em;
-      margin: 0 auto;
-      background: #fff;
-  }
-  
-  .learn-more-button:hover {
-    a {
-      color: #e88382;
-      text-decoration: none;
-    }
-      color: #e88382;
-      border-color: #e88382;
-      transition: .3s;
-  }
-  
-  .teacher-section {
-    display: flex;
-    gap: 50px;
-    align-items: start;
-    justify-content: center;
-    padding: 0 100px;
   }
 
   .teacher-section .teacher-img-container {
-    padding: 30px;
-    border-right: 1px solid #fff;
-  }
-
-  .teacher-img-container img {
-    width: 200px;
-  }
-
-  footer {
-    background-color: black;
-    opacity: 0.85;
-    padding: 30px;
-    text-align: center;
-    color: white;
-  }
-  
-  footer p {
-    margin: 10px 0;
-    font-size: 18px;
-  }
-  
-  footer ul {
-    list-style-type: none;
     padding: 0;
-    margin: 10px 0;
-  }
-  
-  footer ul li {
-    display: inline;
-    margin: 0 10px;
-  }
-  
-  footer ul li a {
-    color: #fce38a; 
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s ease;
-  }
-  
-  footer a {
-    color: #fce38a;
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 18px;
-    transition: color 0.3s ease;
-  }
-  
-  footer a:hover {
-    color: #e6c76e;
-  }
-  
-  footer p a {
-    display: inline-block;
-    margin: 0 10px;
+    border: none;
+    margin-bottom: 20px;
   }
 
-  .fa {
-    color: #fff;
+  .teacher-section div p {
+    text-align: center;
   }
-
-  .contact-us-div {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .contact-us-div p {
-    padding: 10px;
-  }
+}
