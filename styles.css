@@ -2,19 +2,16 @@
   --ourPink: rgba(243, 129, 129, .9);
   --ourYellow: rgba(252, 227, 138, .9);
   --ourWhite: #fff;
+  --ourLighterPink: rgba(243, 129, 129, 0.55);
 }
 
 body, html {
-  font-family: Montserrat, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
   width: 100%;
   background-image: linear-gradient(var(--ourPink), var(--ourYellow));
   color: #fff;
-}
-
-pre {
-  font-family: Montserrat, sans-serif;
 }
 
 nav {
@@ -26,13 +23,14 @@ nav {
   top: 0;
   width: 100%;
   min-height: 100px;
+  /* position: fixed; */
 }
 
 nav a {
-  padding: 15px;
+  padding: 20px;
   color: var(--ourWhite);
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 20px;
   transition: all 0.3s ease;
 }
 
@@ -51,9 +49,14 @@ nav a:hover {
 }
 
 .welcome-msg h1 {
-  font-size: 3rem;
+  font-size: 50px;
+}
+
+.welcome-msg p {
+  font-size: 20px;
   margin: 0;
 }
+
 
 .explore-button {
   background-color: transparent;
@@ -61,7 +64,7 @@ nav a:hover {
   padding: 10px 40px;
   margin: 30px 0;
   text-align: center;
-  font-size: 0.875em;
+  font-size: 16px;
   color: #fff;
   text-transform: uppercase;
   border: 2px solid var(--ourWhite);
@@ -75,6 +78,7 @@ nav a:hover {
 
 .explore-button:hover {
   border-color: var(--ourYellow);
+  font-size: 17px;
 }
 
 .explore-button:hover a {
@@ -89,8 +93,19 @@ nav a:hover {
   background: var(--ourWhite);
 }
 
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 40px;
+}
 .section {
-  padding: 50px 100px;
+  padding: 35px 100px;
+  text-align: left;
+}
+
+.gallery {
   text-align: center;
 }
 
@@ -130,6 +145,15 @@ nav a:hover {
   text-align: center;
 }
 
+.announcements ul {
+  width: 100%;
+  max-width: 600px;
+}
+
+.announcements-text {
+  margin: 0 auto;
+}
+
 .schedule th, .schedule td {
   padding: 15px;
   border: 1px solid var(--ourWhite);
@@ -142,11 +166,12 @@ nav a:hover {
 }
 
 .announcements ul li {
-  background-color: var(--ourYellow);
+  background-color: var(--ourLighterPink);
+  border: 1px solid var(--ourWhite);
   margin: 10px 0;
   padding: 15px;
   border-radius: 10px;
-  color: #333;
+  color: var(--ourWhite);
   font-size: 1.2rem;
 }
 
@@ -197,13 +222,13 @@ footer a:hover {
 .contact-us-div {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 15px;
   justify-content: center;
   align-items: center;
 }
 
 .contact-us-div i {
-  padding: 5px;
+  padding: 3px;
 }
 
 .contact-us-div p {
@@ -217,31 +242,38 @@ footer a:hover {
 /* For Schedule and Announcements sections */
 .schedule, .announcements {
   display: flex;
+  gap: 30px;
   align-items: center;
   justify-content: center;
-  gap: 50px;
   text-align: left;
 }
 
-.schedule-text, .announcements-text {
-  max-width: 300px;
+.gallery > div{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }
 
-.schedule table, .announcements ul {
-  flex-grow: 1;
+.gallery > div > img{
+  /* to center them */
+  margin: 0 auto;
 }
+
 
 @media (max-width: 768px) {
-
   /*make it vertical in smaller screens */
   .section {
-    padding: 30px;
+    padding: 20px;
     gap: 0px;
     flex-direction: column;
     text-align: center;
   }
 
-  .schedule, .announcements {
+  .announcements {
+    flex-direction: column-reverse;
+  }
+
+  .schedule {
     flex-direction: column;
     text-align: center;
   }
@@ -258,5 +290,28 @@ footer a:hover {
 
   .teacher-section div p {
     text-align: center;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+  
+  h2 {
+    font-size: 30px;
+  }
+
+}
+
+/* for mobile views */
+@media (max-width: 390px) {
+  nav a {
+    font-size: 18px;
+  }
+}
+
+/* for mobile views */
+@media (max-width: 360px) {
+  nav a {
+    font-size: 16px;
   }
 }
