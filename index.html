@@ -13,113 +13,121 @@
   <title>Sunshine Kindergarten</title>
   <link rel="stylesheet" href="/styles.css">
   <link rel="icon" href="/img/logo.svg">
-  <!-- for social media icons -->
+
+  <!-- used for navbar/social media icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <!--Header-->
     <header>
+        <!-- navigation -->
         <nav>
-            <a href="#welcome-msg">Home</a>
-            <a href="#schedule">Schedule</a>
-            <a href="#announcements">Announcements</a>
-            <a href="#gallery">Gallery</a>
-            <a href="#contact-us">Contact Us</a>
+          <button class="hamburger">
+            <i class="fa fa-bars"></i>
+          </button>
+          <div class="nav-links">
+            <a href="#welcome-msg"><i class="fa fa-home" ></i>Home</a>
+            <a href="#schedule"><i class="fa fa-calendar" ></i>Schedule</a>
+            <a href="#announcements"><i class="fa fa-bullhorn"></i>Announcements</a>
+            <a href="#gallery"><i class="fa fa-image"></i>Gallery</a>
+            <a href="#contact-us"><i class="fa fa-envelope"></i>Contact Us</a>
+          </div>
         </nav>
-    </header>      
+      </header>      
 
-    <div class="welcome-msg" id="welcome-msg">
-        <h1>Welcome to Sunshine Kindergarten!</h1>
-        <p>Where Learning and Fun Come Together :)</p>
-        <div class="line"></div>
-        <button class="explore-button">
-            <a href="#gallery">Explore!</a>
-        </button>
-    </div>
-
-    <div class="main-content">
+    <!-- main content -->
+    <div>
+        <!-- welcome message -->
+        <div class="welcome-msg" id="welcome-msg">
+            <h1>Welcome to Sunshine Kindergarten!</h1>
+            <p>Where Learning and Fun Come Together 😀</p>
+            <div class="line"></div>
+            <button class="explore-button">
+                <a href="#gallery">Explore! ✨</a>
+            </button>
+        </div>
         <!-- Info about teacher -->
         <div class="section teacher-section">
             <div class="teacher-img-container">
                 <img src="/img/teacher.png" alt="Teacher of Sunshine Kindergarten">
             </div>
             <div>
-                <h2>Meet Our Teacher!</h2>
+                <h2>Meet Our Teacher! 👩🏻‍🏫</h2>
                 <p>Meet Ms. Sarah, our wonderful kindergarten teacher! With over 10 years of experience, she creates a nurturing and engaging environment where children can thrive and learn with joy every day. Ms. Sarah is passionate about early childhood education and loves to bring out the best in every child, ensuring they enjoy a bright and successful future!</p>
             </div>
         </div>   
         
         <!-- Weekly Schedule Section -->
         <div class="section schedule" id="schedule">
-                <div class="schedule-text">
-                    <h2>Weekly Schedule</h2>
-                </div>
-                <table>
-                    <tr>
-                        <th>Day</th>
-                        <th>Activity</th>
-                        <th>Time</th>
-                    </tr>
-                    <tr>
-                        <td>Sunday</td>
-                        <td>Art & Crafts</td>
-                        <td>9:00 AM - 11:00 AM</td>
-                    </tr>
-                    <tr>
-                        <td>Monday</td>
-                        <td>Storytime</td>
-                        <td>10:00 AM - 11:30 AM</td>
-                    </tr>
-                    <tr>
-                        <td>Tuesday</td>
-                        <td>Outdoor Play</td>
-                        <td>1:00 PM - 2:30 PM</td>
-                    </tr>
-                    <tr>
-                        <td>Wednesday</td>
-                        <td>Music</td>
-                        <td>10:30 AM - 12:00 PM</td>
-                    </tr>
-                    <tr>
-                        <td>Thursday</td>
-                        <td>Arabic</td>
-                        <td>11:00 AM - 12:30 PM</td>
-                    </tr>
-                </table>
+            <div class="schedule-text">
+                <h2>Weekly Schedule 📆</h2>
+            </div>
+            <table>
+                <tr>
+                    <th>Day</th>
+                    <th>Activity</th>
+                    <th>Time</th>
+                </tr>
+                <tr>
+                    <td>Sunday</td>
+                    <td>Art & Crafts 🧑‍🎨🖌️</td>
+                    <td>9:00 AM - 11:00 AM</td>
+                </tr>
+                <tr>
+                    <td>Monday</td>
+                    <td>Storytime 📚🧛</td>
+                    <td>10:00 AM - 11:30 AM</td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td>Outdoor Play 🛝🍂</td>
+                    <td>1:00 PM - 2:30 PM</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>Music 🎶 🎻</td>
+                    <td>10:30 AM - 12:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Thursday</td>
+                    <td>Arabic ✍️🖊️</td>
+                    <td>11:00 AM - 12:30 PM</td>
+                </tr>
+            </table>
         </div>
 
         <!-- Announcements Section -->
-            <div class="section announcements" id="announcements">
-                <ul>
-                    <li>New field trip scheduled for October 15th. Permission slips due by October 10th.</li>
-                    <li>School will be closed for fall break from October 20th to October 25th.</li>
-                    <li>Parent-teacher conferences will be held on November 5th.</li>
-                </ul>
-                <div class="announcements-text">
-                    <h2>Announcements</h2>
-                </div>
+        <div class="section announcements" id="announcements">
+            <ul>
+                <li> <span class="annoucement-date">2 October 2024, 11:57 am</span> <br> Field trip scheduled for October 15th. Permission slips due by October 10th. </li>
+                <li> <span class="annoucement-date">6 October 2024, 9:30 am</span> <br> School will be closed for fall break from October 20th to October 25th. </li>
+                <li> <span class="annoucement-date">14 October 2024, 10:22 am</span> <br> Parent-teacher conferences will be held on November 5th.</li>
+            </ul>
+            <div class="announcements-text">
+                <h2>Announcements 📢</h2>
             </div>
+        </div>
 
-             <!-- Gallery Section -->
-            <div class="section gallery" id="gallery">
-                <h2>Gallery</h2>
-                <div class="gallery-images">
-                    <img src="https://placehold.co/250x350" alt="Kids playing in the classroom">
-                    <img src="https://placehold.co/250x350" alt="Kids playing in the classroom">
-                    <img src="https://placehold.co/250x350" alt="Kids playing in the classroom">
-                    <img src="https://placehold.co/250x350" alt="Kids playing in the classroom">
-                    <img src="https://placehold.co/250x350" alt="Kids playing in the classroom">
-                    <img src="https://placehold.co/250x350" alt="Kids playing in the classroom">
-                    <img src="https://placehold.co/250x350" alt="Kids playing in the classroom">
-                    <img src="https://placehold.co/250x350" alt="Kids playing in the classroom">
-                </div>
+        <!-- Gallery Section -->
+        <div class="section gallery" id="gallery">
+            <h2>Photo Gallery 🔥</h2>
+            <div class="gallery-images">
+                <img src="https://placehold.co/250x350" alt="Kids playing in the classroom">
+                <img src="https://placehold.co/250x350" alt="Kids playing in the classroom">
+                <img src="https://placehold.co/250x350" alt="Kids playing in the classroom">
+                <img src="https://placehold.co/250x350" alt="Kids playing in the classroom">
+                <img src="https://placehold.co/250x350" alt="Kids playing in the classroom">
+                <img src="https://placehold.co/250x350" alt="Kids playing in the classroom">
+                <img src="https://placehold.co/250x350" alt="Kids playing in the classroom">
+                <img src="https://placehold.co/250x350" alt="Kids playing in the classroom">
             </div>
+        </div>
     </div>    
 
-    <!-- Footer for contact information-->
+    <!-- Footer for contact information -->
     <footer>
-        <p>&copy; 2024 Little Stars Kindergarten | See you in class!</p>
+        <p>&copy; 2024 Sunshine Kindergarten | See you in class!</p>
         <div class="contact-us-div" id="contact-us">
             <p>Contact us on :</p>
             <a href="https://www.instagram.com/SunshineKindergarten"><i class="fa fa-instagram" aria-hidden="true"></i> Instagram</a>
@@ -129,5 +137,15 @@
             <a href="tel:+97317437666"><i class="fa fa-phone" aria-hidden="true"></i> Call us</a>
         </div>
     </footer>
+
+    <!-- some js to make hamburger menue  -->
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('nav');
+      
+        hamburger.addEventListener('click', () => {
+          nav.classList.toggle('nav-active');
+        });
+      </script>
 </body>
 </html>
