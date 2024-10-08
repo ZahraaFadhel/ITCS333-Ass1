@@ -285,8 +285,14 @@ footer a:hover {
   padding: 10px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 855px){
+  nav a {
+    font-size: 16px;
+  }
+}
 
+@media (max-width: 768px) {
+/* 830 */
   /*make it vertical in smaller screens */
   .section {
     padding: 20px;
