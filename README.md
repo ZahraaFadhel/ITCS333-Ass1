@@ -8,7 +8,7 @@ Welcome to **Sunshine Kindergarten**! This website was developed as an assignmen
 - [Features](#features)
 
 ## contributors 
-- Israa Alwedaei - 202204345 (github username: isfaisal)
+- Israa Alwedaei - 202204345 (github username: i149a)
 - Zahraa Fadhel - 202209444 (github username: ZahraaFadhel)
 - Sec 08
 
